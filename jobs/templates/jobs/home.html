@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
+ 
   <head>
+      {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -34,18 +36,18 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Raynold Gyasi</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}">Raynold Gyasi</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-              <a class="nav-item nav-link" href="#">Blog </a>
-            <a class="nav-item nav-link" href="#">Resume </a>
-            <a class="nav-item nav-link" href="#">LinkedIn</a>
-            <a class="nav-item nav-link" href="#">Github</a>
-            <a class="nav-item nav-link" href="#">Twitter</a>
+              <a class="nav-item nav-link" href="{% url 'myblog' %}">Blog </a>
+            <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume </a>
+            <a class="nav-item nav-link" href="https://ca.linkedin.com/in/raynoldgyasi">LinkedIn</a>
+            <a class="nav-item nav-link" href="https://github.com/speedyray?tab=repositories">Github</a>
+            <a class="nav-item nav-link" href="https://twitter.com/globaldstore">Twitter</a>
           </div>
         </div>
       </nav>
@@ -64,6 +66,7 @@
   </body>    
         <a href="mailto:speedyray2ray@gmail.com" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static 'ray.jpg' %}" />
     </div>
   </section>
  <div class="album py-5 bg-light">
